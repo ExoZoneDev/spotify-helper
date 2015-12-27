@@ -1,11 +1,14 @@
 {
   "name": "spotify-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Enables easy controlling of the player via an application.",
   "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha tests/index.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://artdude543@github.com/ExoZoneDev/Spotify-Helper.git"
+    "url": "git+https://git@github.com/ExoZoneDev/Spotify-Helper.git"
   },
   "keywords": [
     "spotify",
@@ -23,5 +26,10 @@
   "homepage": "https://github.com/ExoZoneDev/Spotify-Helper#readme",
   "dependencies": {
     "request-promise": "^1.0.2"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "chai-as-promised": "^5.2.0",
+    "mocha": "^2.3.4"
   }
 }
