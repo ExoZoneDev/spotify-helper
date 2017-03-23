@@ -11,7 +11,7 @@ Headers.prototype.set = function(name, value) {
   if (header === 'origin') {
     header = 'Origin';
   }
-	this._headers[header] = [value];
+  this._headers[header] = [value];
 };
 
 const DEFAULT_RETURN_ON = ['login', 'logout', 'play', 'pause', 'error', 'ap'];

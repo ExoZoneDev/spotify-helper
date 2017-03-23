@@ -13,7 +13,7 @@ npm install spotify-helper
 This example will show you how the pause the player.
 
 ```
-const SpotifyHelper = require('spotify-helper');
+const { SpotifyHelper } = require('spotify-helper');
 let Spotify = new SpotifyHelper();
 
 Spotify.init()
@@ -25,7 +25,7 @@ Spotify.init()
 This example will show you how the play the player.
 
 ```
-const SpotifyHelper = require('spotify-helper');
+const { SpotifyHelper } = require('spotify-helper');
 let Spotify = new SpotifyHelper();
 
 Spotify.init()
