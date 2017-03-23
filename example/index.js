@@ -1,7 +1,7 @@
 'use strict';
 
 // Require our module.
-const SpotifyHelper = require('../lib/index');
+const { SpotifyHelper } = require('../js/index');
 
 // Create the Helper.
 let Spotify = new SpotifyHelper();

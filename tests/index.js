@@ -1,8 +1,6 @@
-'use strict';
-
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const SpotifyHelper = require('../lib/index');
+const { SpotifyHelper } = require('../js/index');
 
 chai.should();
 chai.use(chaiAsPromised);
@@ -19,15 +17,18 @@ describe('Spotify', function (done) {
     return Spotify.getStatus(1).should.eventually.be.an('object');
   });
 
-  it('should play a track.', function () {
+  it('should change the track.', function () {
     return Spotify.play('spotify:track:6H79Py5s5nzGOnRDVIU7eR').should.eventually.be.an('object').and.have.property('playing', true);
   });
 
-  it('should pause the player.', function () {
+  it('should pause the track.', function () {
     return Spotify.pause().should.eventually.be.an('object').and.have.property('playing', false);
   });
 
-  it('should play the player.', function () {
-    return Spotify.play().should.eventually.be.an('object').and.have.property('playing', true);
+  it('should play the track.', function (done) {
+    this.timeout(30000);
+    setTimeout(function () {
+      return Spotify.play().should.eventually.be.an('object').and.have.property('playing', true).notify(done);
+    }, 5000);
   });
 });
